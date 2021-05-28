@@ -1,14 +1,17 @@
 <h2>ログイン</h2>
-<form id="login_form">
+<% if flash.alert %>
+  <p class="alert"><%= flash.alert %></p>
+<%end%>
+<%= form_with url: session_path, id: "login_form", local: true do |f| %>
   <div>
     <label>ユーザー名：</label>
-    <input type="text">
+    <%= f.text_field name="name" %>
   </div>
   <div>
     <label>パスワード：</label>
-    <input type="password">
+    <%= f.password_field name="password" %>
   </div>
   <div>
-    <input type="submit" value="ログイン">
+    <%= f.submit value="ログイン" %>
   </div>
-</form>
+<% end %>
