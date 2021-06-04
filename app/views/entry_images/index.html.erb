@@ -36,10 +36,10 @@
             </div>
             <div>
               <%= link_to_unless image.first?, "上へ",
-                move_higher_entry_image_path(@entry, :image),
+                move_higher_entry_image_path(@entry, image),
                 method: :patch %>
               <%= link_to_unless image.last?, "下へ",
-                move_lower_entry_image_path(@entry, :image),
+                move_lower_entry_image_path(@entry, image),
                 method: :patch %>
             </div>
           </td>

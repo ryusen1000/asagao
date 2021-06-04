@@ -46,13 +46,6 @@ class EntryImagesController < ApplicationController
     redirect_to [@entry, :images], notice: "画像を保存しました。"
   end
 
-  private def image_params
-    params.require(:entry_image).permit(
-      :new_data,
-      :alt_text
-    )
-  end
-
   def move_higher
     @image = @entry.images.find(params[:id])
     @image.move_higher
@@ -63,5 +56,12 @@ class EntryImagesController < ApplicationController
     @image = @entry.images.find(params[:id])
     @image.move_lower
     redirect_back fallback_location: [@entry, :images]
+  end
+
+  private def image_params
+    params.require(:entry_image).permit(
+      :new_data,
+      :alt_text
+    )
   end
 end
