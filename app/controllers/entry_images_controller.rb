@@ -6,7 +6,7 @@ class EntryImagesController < ApplicationController
   end
 
   def index
-    @images = @entry.images.order(:id)
+    @images = @entry.images.order(:position)
   end
 
   def show
@@ -51,5 +51,17 @@ class EntryImagesController < ApplicationController
       :new_data,
       :alt_text
     )
+  end
+
+  def move_higher
+    @image = @entry.images.find(params[:id])
+    @image.move_higher
+    redirect_back fallback_location: [@entry, :images]
+  end
+
+  def move_lower
+    @image = @entry.images.find(params[:id])
+    @image.move_lower
+    redirect_back fallback_location: [@entry, :images]
   end
 end

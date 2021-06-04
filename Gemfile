@@ -30,6 +30,7 @@ gem 'email_validator'
 gem 'rails-i18n'
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem 'acts_as_list'
 
 
 group :development, :test do
