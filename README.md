@@ -22,6 +22,6 @@ AWSなどクラウドストレージサービスの設定も除外しており�
 
 開発環境:
 
-Ruby/Ruby on Rails/MySQL
+Ruby/Ruby on Rails/SQLite
 
 Github/Visual Studio Code
