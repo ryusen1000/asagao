@@ -2,9 +2,9 @@
 
 <h1><%= @page_title %></h1>
 
-<p><%= link_to "記事の詳細に戻る", @article %></p>
+<div class="toolbar"><%= link_to "記事の詳細に戻る", [:admin, @article] %></div>
 
-<%= form_with model: @article, local: true do |form| %>
+<%= form_with model: [:admin, @article], local: true do |form| %>
   <%= render "form", form: form %>
   <div><%= form.submit %></div>
 <% end %>
