@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby on Rails学習
+改訂4版基礎Ruby on Railsの学習用アプリケーションです。
+ER図はおおかたテキスト準拠のため掲載していません。
+テキストはRails ver5準拠ですが、作成はRails ver6で行いました。
+また、form_tag,form_forに関してはform_withに置き換えて作成しています。
+jqueryは導入方法が大きく変更されていたため、エラーを避けるため行なっておりません。
+AWSなどクラウドストレージサービスの設定も除外しております。
 
-Things you may want to cover:
+開発期間：11日間
+総開発時間：約65時間
+1日あたりの平均作業時間：約6時間
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+開発環境:
+Ruby/Ruby on Rails/MySQL
+Github/Visual Studio Code
